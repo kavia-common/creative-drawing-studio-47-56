@@ -1,8 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// PUBLIC_INTERFACE
-function Navbar({ title = "Drawing Studio", rightActions = null }) {
+/**
+ * PUBLIC_INTERFACE
+ * Navbar component for the drawing app. Accepts an optional 'hide' prop:
+ * - When hide is true, Navbar will not render.
+ * - When hide is false (default), Navbar will render as usual.
+ */
+function Navbar({ title, rightActions, hide }) {
+  if (hide) return null;
+
   return (
     <nav
       className="navbar"
@@ -113,6 +120,14 @@ Navbar.propTypes = {
   title: PropTypes.string,
   /** Optional React element(s) to display as right-side actions */
   rightActions: PropTypes.node,
+  /** If true, navbar is hidden; renders nothing */
+  hide: PropTypes.bool,
+};
+
+Navbar.defaultProps = {
+  title: "Drawing Studio",
+  rightActions: null,
+  hide: false,
 };
 
 export default Navbar;
