@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
+import Navbar from './Navbar';
 import './App.css';
 
 // PUBLIC_INTERFACE
@@ -18,6 +19,9 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar
+        title="Creative Drawing Studio"
+      />
       <header className="App-header">
         <button 
           className="theme-toggle" 

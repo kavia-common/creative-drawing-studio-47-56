@@ -101,4 +101,78 @@
     padding: 8px 16px;
     font-size: 12px;
   }
+
+  .navbar {
+    flex-direction: column;
+    padding: 0 0.75rem;
+    min-height: 48px;
+    justify-content: center;
+    gap: 0.25em;
+  }
+  .navbar-title {
+    font-size: 1.1rem !important;
+  }
+  .navbar-actions {
+    gap: 0.5rem !important;
+  }
+}
+
+/* Navbar styles */
+.navbar {
+  --navbar-primary: #3b82f6;
+  --navbar-success: #06b6d4;
+  --navbar-bg: #fff;
+  --navbar-shadow: 0 2px 8px 0 rgba(59,130,246,0.10), 0 1.5px 4px 0 rgba(6,182,212,0.06);
+
+  position: sticky;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--navbar-bg);
+  box-shadow: var(--navbar-shadow);
+  border-bottom: 1px solid #e9ecef;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.navbar-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--navbar-primary);
+  letter-spacing: 0.01em;
+  user-select: none;
+  outline: none;
+}
+
+.navbar-title:focus {
+  outline: 2px solid var(--navbar-success);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-action:focus {
+  outline: 2.5px solid var(--navbar-success);
+}
+
+/* Shadow on focus for accessibility */
+.navbar-action:focus-visible {
+  box-shadow: 0 0 0 2px var(--navbar-primary), 0 1px 4px 0 var(--navbar-success);
+}
+
+/* Reduce navbar content for very narrow screens */
+@media (max-width: 440px) {
+  .navbar-title {
+    font-size: 1rem !important;
+  }
 }
