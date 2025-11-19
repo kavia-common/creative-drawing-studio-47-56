@@ -6,8 +6,14 @@
   --text-primary: #282c34;
   --text-secondary: #61dafb;
   --border-color: #e9ecef;
-  --button-bg: #007bff;
+  --button-bg: #3b82f6;        /* theme primary */
+  --button-success: #06b6d4;   /* theme accent/success */
+  --button-outline: transparent;
+  --button-outline-border: #3b82f6;
   --button-text: #ffffff;
+  --button-text-secondary: #3b82f6;
+  --button-radius: 9px;
+  --button-focus: 0 0 0 3px rgba(59,130,246,0.20);
 }
 
 [data-theme="dark"] {

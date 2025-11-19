@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import Navbar from './Navbar';
+import Button from './components/Button';
 import './App.css';
+import './components/Button.css';
 
 // PUBLIC_INTERFACE
 function App() {
@@ -47,6 +49,18 @@ function App() {
             />
             Hide Navbar (demo)
           </label>
+        </div>
+        {/* Example usage of the new Button for toolbar placeholder */}
+        <div style={{ marginBottom: "1.3em" }}>
+          <Button variant="primary" size="md" style={{ marginRight: 8 }}>
+            Toolbar Action
+          </Button>
+          <Button variant="secondary" size="sm" style={{ marginRight: 8 }}>
+            Accent Action
+          </Button>
+          <Button variant="outline" size="md" disabled>
+            Disabled
+          </Button>
         </div>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
